@@ -53,42 +53,38 @@
 % FIRST ROW
 \begin{columns}
     \column{0.50}
-    \block{Methodology}{
-        lalala
-        \vspace{5cm}
-    }
-    \column{0.50}
     \block{TCPSnitch}{
         \begin{itemize}
-            \item Command-line application that collects detailed traces of the
-        interactions between networked applications and the TCP/IP stack.
-            \item Intercepts function calls and collects parameters,
-            return value, timestamps, the thread id, the error number, etc.
-            \item Runs on Linux and Android.
-            \item Open-source \url{https://github.com/GregoryVds/tcpsnitch}.
+            \item Software that collects detailed traces of the
+                  interactions between networked applications and the TCP/IP stack.
+            \item Tracks the functions that are applied on each socket with
+                their timestamp, parameters, return value, thread id, etc.
+            \item Able to trace sequence of calls and allows to
+                detect patterns of interactions.
+            \item Runs on both Linux and Android.
         \end{itemize}
-    }
-\end{columns}
-
-
-% SECOND ROW
-\begin{columns}
-    \column{0.50}
-    \block{Dataset}{
-        lalala
-        \vspace{5cm}
+        \vspace{0.8cm}
+        TCPSnitch runs the specified command until it exits, much like tcpdump:
+        \begin{tikzfigure}
+            \includegraphics[width=.4\textwidth]{figures/tcpsnitch}
+        \end{tikzfigure}
+        TCPSnitch is open-source: \url{https://github.com/GregoryVds/tcpsnitch}.
     }
     \column{0.50}
-    \block{https://tcpsnitch.org}{
+    \block{Public dataset: \url{https://tcpsnitch.org}}{
         \begin{itemize}
             \item TCPSnitch automatically uploads traces to \url{https://tcpsnitch.org}.
             \item Public platform designed to centralize and visualize the traces.
-            \item Upon uploading a trace, multiple metrics and charts are computed.
-            \item Open-source \url{https://github.com/GregoryVds/tcpsnitch_web}.
+            \item Currently contains traces for more than 130 applications on Linux and Android.
+            \item In total, this represents about 5 M function calls on 25 K sockets.
         \end{itemize}
+        \vspace{0.8cm}
+        Upon uploading a trace, multiple metrics and charts are computed:
         \begin{tikzfigure}
             \includegraphics[width=.4\textwidth]{figures/org2}
         \end{tikzfigure}
+
+        TCPSnitch.org is open-source: \url{https://github.com/GregoryVds/tcpsnitch_web}.
     }
 \end{columns}
 

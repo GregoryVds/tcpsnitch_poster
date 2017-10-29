@@ -105,7 +105,7 @@
     \column{0.50}
     \block{API usage driven by high-level frameworks and libraries}{
 
-    An HTTP GET request over TLS yields different API footprints with different libraries\\
+    An HTTP GET request over TLS yields different API footprints with different libraries.\\
 \begin{tikzfigure}
 \begin{tabular}{lllllll}
 \hline
@@ -127,7 +127,9 @@
 % FOURTH ROW
 \begin{columns}
     \column{0.33}
-    \block{Android: API usage differs from textbook usage}{
+    \block{Android: API functions usage}{
+        On Android, the API functions usage differs from textbook usage. Some
+        unexpected functions are widely used.
         \begin{tikzfigure}
            \includegraphics{figures/finding3}
         \end{tikzfigure}
@@ -137,16 +139,17 @@
         On Android, UDP sockets are mainly used as a shortcut to retrieve
         information about the network configuration.
         \begin{tikzfigure}
-           \includegraphics{figures/finding4}
+           \includegraphics{charts/finding4}
         \end{tikzfigure}
     }
     \column{0.33}
     \block{Android: TCP\_INFO widely used}{
-        For Facebook applications, the number of TCP\_INFO calls seems to be
-        a linear function of the number of recv() calls.
+        For some applications, the number of TCP\_INFO calls is a linear
+        function of the number of recv() calls.
         \begin{tikzfigure}
-           \includegraphics{figures/finding5}
+           \includegraphics{charts/finding5}
         \end{tikzfigure}
+%        \vspace{1cm}
     }
 \end{columns}
 

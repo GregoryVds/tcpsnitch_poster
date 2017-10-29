@@ -16,7 +16,6 @@ xs = [x[0] for x in points]
 ys = [x[1] for x in points]
 
 plt.scatter(xs, ys)
-plt.title('TCP_INFO calls vs recv() calls')
 plt.xlabel('Number of recv() calls')
 plt.ylabel('Number of TCP_INFO calls')
 fig=plt.figure(1)

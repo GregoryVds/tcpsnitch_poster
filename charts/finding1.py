@@ -30,7 +30,7 @@ plt.ylabel('Percentage of apps using function')
 plt.ylim([0,100])
 plt.margins(x=0.01, y=0)
 plt.grid(True, axis='y')
-plt.yticks(range(100)[0::10])
+plt.yticks(range(101)[0::10])
 plt.xticks(rotation='vertical')
 
 plt.tight_layout()

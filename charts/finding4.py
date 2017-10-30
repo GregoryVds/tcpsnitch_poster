@@ -32,7 +32,11 @@ patches[3].set_hatch("|||")
 #plt.gca().set_prop_cycle("color", [cm(1.*i/NUM_COLORS) for i in range(NUM_COLORS)])
 
 plt.axis('equal')
-plt.legend(pie[0], labels,  bbox_to_anchor=(0.45, 0.35))
+l = plt.legend(pie[0], labels,  bbox_to_anchor=(0.45, 0.35))
+for i, text in enumerate(l.get_texts()):
+    if i==0:
+        text.set_color("red")
+
 plt.gcf().subplots_adjust(top=0.90)
 fig=plt.figure(1)
 fig.patch.set_facecolor('#EBEBEB')

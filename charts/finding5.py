@@ -18,6 +18,7 @@ ys = [x[1] for x in points]
 plt.scatter(xs, ys)
 plt.xlabel('Number of recv() calls')
 plt.ylabel('Number of TCP_INFO calls')
+plt.title('Recv() and TCP_INFO calls per application')
 fig=plt.figure(1)
 fig.patch.set_facecolor('#EBEBEB')
 plt.savefig("finding5.pdf", facecolor=fig.get_facecolor(), edgecolor='none')

@@ -15,8 +15,9 @@ objects = ('socket', 'connect', 'getsockopt', 'setsockopt', 'fcntl',
 
 y_pos = np.arange(len(objects))
 usage = [100, 100, 100, 100, 100, 98, 97, 95, 93, 93, 92, 86, 76, 75, 52, 48, 43, 41, 41, 35, 16, 14, 12, 12, 12, 5, 2, 1, 1]
+colors = ['b','b','r','r','r','r','b','r','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b']
 
-plt.bar(y_pos, usage, align='center', alpha=0.5)
+plt.bar(y_pos, usage, align='center', alpha=0.5, color=colors)
 plt.xticks(y_pos, objects)
 plt.ylabel('Percentage of apps using function')
 plt.title('Android API functions usage')
